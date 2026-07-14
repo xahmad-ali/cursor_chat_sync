@@ -1,0 +1,42 @@
+{
+  "name": "cursor-chat-sync",
+  "displayName": "cursor-chat-sync",
+  "description": "Syncs Cursor AI chat threads between devices (cross-platform, zero deps).",
+  "version": "0.0.8",
+  "publisher": "ahmad",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [
+    "onCommand:cursor-chat-sync.exportChat",
+    "onCommand:cursor-chat-sync.importChat"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "cursor-chat-sync.exportChat",
+        "title": "Cursor Sync: Export Chat History"
+      },
+      {
+        "command": "cursor-chat-sync.importChat",
+        "title": "Cursor Sync: Import Chat History"
+      }
+    ]
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test",
+    "package": "npx @vscode/vsce package"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.100.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "eslint": "^9.39.3",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
