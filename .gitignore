@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Build / package output
+dist/
+out/
+*.vsix
+.vsixmanifest
+
+# VS Code test runner
+.vscode-test/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+
+# Coverage / misc
+coverage/
+*.tgz
+.turbo/
